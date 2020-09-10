@@ -3,7 +3,7 @@ Contenedor con RHEL y utilidades para pruebas
 
 * Enlazado con Dockerhub para que cuando se produzcan cambios re-construya el contenedor
 
-``
+```
 FROM centos
 RUN sed -e 's/enabled=0/enabled=1/g' /etc/yum.repos.d/CentOS-PowerTools.repo > /etc/yum.repos.d/MOD_CentOS-PowerTools.repo 
 RUN mv -f /etc/yum.repos.d/MOD_CentOS-PowerTools.repo /etc/yum.repos.d/CentOS-PowerTools.repo 
@@ -12,4 +12,4 @@ RUN yum install -y tcpdump nc bind-utils net-tools lynx openssh openssh-clients 
 RUN mv /etc/localtime /etc/localtime.orig 
 RUN ln -s /usr/share/zoneinfo/Europe/Madrid /etc/localtime 
 CMD ["/bin/bash"]
-``
+```

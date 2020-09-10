@@ -3,7 +3,7 @@ Contenedor con RHEL y utilidades para pruebas
 
 * Enlazado con Dockerhub para que cuando se produzcan cambios re-construya el contenedor
 
-```
+```Dockerfile
 FROM centos
 RUN sed -e 's/enabled=0/enabled=1/g' /etc/yum.repos.d/CentOS-PowerTools.repo > /etc/yum.repos.d/MOD_CentOS-PowerTools.repo 
 RUN mv -f /etc/yum.repos.d/MOD_CentOS-PowerTools.repo /etc/yum.repos.d/CentOS-PowerTools.repo 
